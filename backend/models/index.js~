@@ -1,0 +1,13 @@
+const dbConfig = require('../db/db.config.js');
+const model = require('./todo.model.js');
+
+const mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
+
+const db = {};
+db.mongoose = mongoose;
+db.url = dbConfig.url;
+db.todos = require('./todo.model.js');
+
+console.log(model);
+module.exports = db;
