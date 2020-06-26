@@ -25,7 +25,7 @@ db.mongoose
 
 require('./routes/todo.routes')(app);
 
-const PORT = 3000;
+const PORT = 4000;
 app.listen(PORT, () => {
 	console.log(`Connected to port: ${PORT}`);
 });
