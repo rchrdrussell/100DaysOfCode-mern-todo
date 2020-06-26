@@ -20,7 +20,7 @@ export default class EditTodo extends Component {
 	}
 	
 	
-	componentDidMout(){
+	componentDidMount(){
 		axios.get('http://localhost:4000/todo/' + this.props.match.params.id)
 		  .then(response => {
 			  this.setState({
@@ -29,6 +29,7 @@ export default class EditTodo extends Component {
 				  todo_priority: response.data.todo_priority,
 				  todo_completed: response.data.todo_completed
 			  })
+
 		  })
 		  .catch(err => {
 			  console.log(err);
@@ -78,6 +79,8 @@ export default class EditTodo extends Component {
 
 
 	
+
+
 	render() {
 		return (
 			<div>
